@@ -34,6 +34,9 @@
             "actions": [
                 "git status"
             ],
+            "frequency": "daily",
+            "when": "new-day",
+            "notify-dashboard": true,
             "wdir": "$.thisDir()"
         }
     ]
