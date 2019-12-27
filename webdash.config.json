@@ -30,9 +30,15 @@
             "wdir": "$.thisDir()"
         },
         {
-            "name": "report-repo-state",
+            "name": "git-status",
             "actions": [
                 "git status"
+            ]
+        },
+        {
+            "name": "report-repo-state",
+            "actions": [
+                "report-repo-state git-status"
             ],
             "frequency": "daily",
             "when": "new-day",
