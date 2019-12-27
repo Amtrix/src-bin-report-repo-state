@@ -16,7 +16,7 @@ Reports if the directory contains changes from git's perspective.
             ],
             "frequency": "daily",
             "when": "new-day",
-            "notify-dashboard": true,
+            "notify-dashboard": true, // add entry in notification logs when a task was executed.
             "wdir": "$.thisDir()"
         }
     ]
