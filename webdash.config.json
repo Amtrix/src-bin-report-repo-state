@@ -2,7 +2,7 @@
     "commands": [
         {
             "name": "clean",
-            "action": "rm build/report-repo-state",
+            "action": "rm -f build/report-repo-state",
             "wdir": "$.thisDir()"
         },
         {
