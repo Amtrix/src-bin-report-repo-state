@@ -66,8 +66,10 @@ void GetRepoState(int argc, char **argv) {
         for (std::string::size_type i=0; i < line.length(); ++i)
              lowline += std::tolower(line[i],loc);
 
-        if (lowline.find("change") != std::string::npos
-         || lowline.find("untracked") != std::string::npos) {
+        bool change_exists = lowline.find("change") != std::string::npos ||
+            lowline.find("untracked") != std::string::npos;
+
+        if (change_exists) {
             changeline = line;
         }
     }
