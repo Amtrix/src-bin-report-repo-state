@@ -77,8 +77,9 @@ void GetRepoState(int argc, char **argv) {
         cout << changeline << endl;
         cout << endl;
 
-        WebDashCore::Get().Notify("Changes exist within directory of " + wdConfig.GetPath() + ":" + cmd);
+        WebDashCore::Get().Notify("GIT changes found @ " + wdConfig.GetPath() + "!" + cmd);
     } else {
+        WebDashCore::Get().Log(WebDash::LogType::INFO, "No GIT changes @ " + wdConfig.GetPath() + "!" + cmd);
         cout << "No changes" << endl;
     }
 }
